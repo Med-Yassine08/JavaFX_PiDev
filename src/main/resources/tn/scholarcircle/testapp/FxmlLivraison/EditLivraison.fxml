@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="544.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.scholarcircle.testapp.controllers.Livraison.EditLivraison">
+   <children>
+      <VBox layoutX="191.0" layoutY="332.0" prefHeight="188.0" prefWidth="306.0" spacing="2.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+            <DatePicker fx:id="dateTFF" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+            <TextField fx:id="adresseTFF" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Client">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+            <TextField fx:id="clientTFF" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+            <TextField fx:id="statusTFF" />
+         </children>
+      </VBox>
+      <TableView fx:id="tableView2" layoutX="214.0" layoutY="109.0" prefHeight="200.0" prefWidth="598.0">
+        <columns>
+          <TableColumn fx:id="dateCol" prefWidth="85.59999084472656" text="Date" />
+            <TableColumn fx:id="adresseCol" prefWidth="93.5999755859375" text="Adresse" />
+            <TableColumn fx:id="clientCol" prefWidth="79.199951171875" text="Client" />
+            <TableColumn fx:id="statusCol" prefWidth="79.20001220703125" text="Status" />
+            <TableColumn fx:id="quantiteCol" prefWidth="56.0" text="Quantite" />
+            <TableColumn fx:id="fraisCol" prefWidth="52.79998779296875" text="Frais" />
+            <TableColumn fx:id="livreurCol" prefWidth="148.79998779296875" text="Livreur" />
+        </columns>
+      </TableView>
+      <Label layoutX="401.0" layoutY="27.0" prefHeight="47.0" prefWidth="265.0" text="Service Livraison" textFill="#007304">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="543.0" prefWidth="182.0">
+         <children>
+            <Line endX="-96.00001525878906" endY="416.29290771484375" layoutX="276.0" layoutY="126.0" startX="-98.59999084472656" startY="-127.00000762939453" />
+            <Button layoutX="48.0" layoutY="302.0" mnemonicParsing="false" onAction="#modifierLivraison" prefHeight="26.0" prefWidth="78.0" text="Modifier" textFill="#008616">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="50.0" layoutY="347.0" mnemonicParsing="false" onAction="#supprimerLivraison" prefHeight="26.0" prefWidth="78.0" text="Supprimer" textFill="#9c1b00">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Ellipse layoutX="83.0" layoutY="158.0" opacity="0.69" radiusX="45.0" radiusY="58.0" stroke="#00000050" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.18773776292800903" green="0.025499999523162842" blue="0.5099999904632568" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006729475100942127">
+                           <color>
+                              <Color red="0.3902534246444702" green="0.7614944577217102" blue="0.8105263113975525" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.010604288429021835" green="0.16842105984687805" blue="0.05794931948184967" opacity="0.07000000029802322" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Ellipse>
+            <Label layoutX="77.0" layoutY="158.0" text="Edit Livraison" textFill="#006317">
+               <font>
+                  <Font name="Corbel Light Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="138.0" text="Scholar Circle" textFill="#0e0371">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="48.0" layoutY="395.0" mnemonicParsing="false" onAction="#pageAcceuil" prefHeight="26.0" prefWidth="78.0" text="Acceuil" textFill="#19009c">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="534.0" layoutY="330.0" prefHeight="200.0" prefWidth="290.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="quantiteTFF" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Frais">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fraisTFF" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Livreur">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="livreurTFF" />
+         </children>
+      </VBox>
+      <Button layoutX="810.0" layoutY="1.0" mnemonicParsing="false" onAction="#FermePage" text="✗" textFill="#d10000" />
+   </children>
+</AnchorPane>

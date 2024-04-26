@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="391.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.scholarcircle.testapp.controllers.Livreur.AfficherLivreur">
+   <children>
+      <AnchorPane prefHeight="368.0" prefWidth="224.0">
+         <children>
+            <Line endX="-92.59999084472656" endY="265.1000061035156" layoutX="315.0" layoutY="128.0" startX="-92.5999755859375" startY="-140.0" />
+            <Button layoutX="38.0" layoutY="243.0" mnemonicParsing="false" onAction="#pdfLivreur" prefHeight="26.0" prefWidth="78.0" text="PDF" textFill="#de18cc">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Ellipse layoutX="83.0" layoutY="158.0" opacity="0.69" radiusX="45.0" radiusY="58.0" stroke="#00000050" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.18773776292800903" green="0.025499999523162842" blue="0.5099999904632568" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006729475100942127">
+                           <color>
+                              <Color red="0.3902534246444702" green="0.7614944577217102" blue="0.8105263113975525" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.010604288429021835" green="0.16842105984687805" blue="0.05794931948184967" opacity="0.07000000029802322" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Ellipse>
+            <Label layoutX="77.0" layoutY="158.0" text="Imprimer Livreur" textFill="#006317">
+               <font>
+                  <Font name="Corbel Light Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="138.0" text="Scholar Circle" textFill="#940899">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="38.0" layoutY="282.0" mnemonicParsing="false" onAction="#pageAcceuil" prefHeight="26.0" prefWidth="78.0" text="Acceuil" textFill="#19009c">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableViewLiv" layoutX="242.0" layoutY="136.0" prefHeight="200.0" prefWidth="739.0">
+        <columns>
+          <TableColumn fx:id="nomCol" prefWidth="87.99998474121094" text="Nom" />
+          <TableColumn fx:id="prenomCol" prefWidth="88.00006103515625" text="Prenom" />
+            <TableColumn fx:id="adresseCol" prefWidth="95.199951171875" text="Adresse" />
+            <TableColumn fx:id="emailCol" prefWidth="147.20001220703125" text="Email" />
+            <TableColumn fx:id="numtelCol" minWidth="0.800048828125" prefWidth="84.79998779296875" text="NumTel" />
+            <TableColumn fx:id="zoneCol" prefWidth="132.0" text="Zone" />
+            <TableColumn fx:id="modetransportCol" prefWidth="104.00006103515625" text="ModeTransport" />
+        </columns>
+      </TableView>
+      <TextField fx:id="FilterField" layoutX="242.0" layoutY="93.0" promptText="Recherche..." />
+      <Button layoutX="405.0" layoutY="92.0" mnemonicParsing="false" onAction="#rechercheLivreur" prefHeight="26.0" prefWidth="30.0" text="✔" textFill="#005b08" />
+      <Button layoutX="967.0" layoutY="14.0" mnemonicParsing="false" onAction="#FermePage" text="✗" textFill="#d10000" />
+   </children>
+</AnchorPane>

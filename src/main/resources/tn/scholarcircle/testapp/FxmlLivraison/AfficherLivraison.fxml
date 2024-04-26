@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="411.0" prefWidth="1014.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.scholarcircle.testapp.controllers.Livraison.AfficherLivraison">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="173.0">
+         <children>
+            <AnchorPane prefHeight="543.0" prefWidth="182.0">
+               <children>
+                  <Line endX="-94.20002746582031" endY="409.69287109375" layoutX="315.0" layoutY="128.0" startX="-94.20002746582031" startY="-128.0" />
+                  <Button layoutX="48.0" layoutY="302.0" mnemonicParsing="false" onAction="#pdfLivraison" prefHeight="26.0" prefWidth="78.0" text="PDF" textFill="#de18cc">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Ellipse layoutX="83.0" layoutY="158.0" opacity="0.69" radiusX="45.0" radiusY="58.0" stroke="#00000050" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.18773776292800903" green="0.025499999523162842" blue="0.5099999904632568" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="0.3902534246444702" green="0.7614944577217102" blue="0.8105263113975525" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.010604288429021835" green="0.16842105984687805" blue="0.05794931948184967" opacity="0.07000000029802322" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Ellipse>
+                  <Label layoutX="77.0" layoutY="158.0" text="Imprimer Livraison" textFill="#006317">
+                     <font>
+                        <Font name="Corbel Light Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="138.0" text="Scholar Circle" textFill="#0e0371">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="48.0" layoutY="344.0" mnemonicParsing="false" onAction="#pageAcceuil" prefHeight="26.0" prefWidth="78.0" text="Acceuil" textFill="#19009c">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <TableView fx:id="tableView" layoutX="229.0" layoutY="116.0" prefHeight="272.0" prefWidth="791.0">
+        <columns>
+          <TableColumn fx:id="dateCol" prefWidth="120.79997253417969" text="Date" />
+            <TableColumn fx:id="adresseCol" prefWidth="154.4000244140625" text="Adresse" />
+            <TableColumn fx:id="clientCol" minWidth="7.99993896484375" prefWidth="133.5999755859375" text="Client" />
+            <TableColumn fx:id="statusCol" prefWidth="90.4000244140625" text="Status" />
+            <TableColumn fx:id="quantiteCol" prefWidth="79.2000732421875" text="Quantite" />
+            <TableColumn fx:id="fraisCol" prefWidth="79.199951171875" text="Frais" />
+            <TableColumn fx:id="livreurCol" prefWidth="128.0" text="Livreur" />
+        </columns>
+      </TableView>
+      <TextField fx:id="FilterField" layoutX="229.0" layoutY="70.0" prefHeight="26.0" prefWidth="194.0" promptText="Recherche..." />
+      <Button layoutX="423.0" layoutY="70.0" mnemonicParsing="false" onAction="#rechercheLivraison" prefHeight="26.0" prefWidth="30.0" text="✔" textFill="#005b08" />
+      <Button layoutX="992.0" layoutY="1.0" mnemonicParsing="false" onAction="#FermePage" text="✗" textFill="#d10000" />
+   </children>
+</AnchorPane>

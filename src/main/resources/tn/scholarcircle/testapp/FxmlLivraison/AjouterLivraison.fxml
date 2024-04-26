@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="492.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.scholarcircle.testapp.controllers.Livraison.AjouterLivraison">
+   <children>
+      <VBox prefHeight="422.0" prefWidth="221.0">
+         <children>
+            <AnchorPane prefHeight="422.0" prefWidth="229.0">
+               <children>
+                  <Button layoutX="88.0" layoutY="261.0" mnemonicParsing="false" onAction="#ajouterlivraison" prefHeight="26.0" prefWidth="78.0" text="Ajouter" textFill="#00a9f0">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="89.0" layoutY="302.0" mnemonicParsing="false" onAction="#acceuilPage" prefHeight="26.0" prefWidth="78.0" text="Acceuil" textFill="#06009c">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Ellipse layoutX="83.0" layoutY="158.0" opacity="0.69" radiusX="45.0" radiusY="58.0" stroke="#00000050" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.18773776292800903" green="0.025499999523162842" blue="0.5099999904632568" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="0.3902534246444702" green="0.7614944577217102" blue="0.8105263113975525" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.010604288429021835" green="0.16842105984687805" blue="0.05794931948184967" opacity="0.07000000029802322" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Ellipse>
+                  <Label layoutX="77.0" layoutY="158.0" text="Ajouter Livraison" textFill="#006317">
+                     <font>
+                        <Font name="Corbel Light Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="138.0" text="Scholar Circle" textFill="#70036d">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-96.00001525878906" endY="416.29290771484375" layoutX="316.0" layoutY="74.0" startX="-94.40000915527344" startY="-74.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <ButtonBar layoutX="320.0" layoutY="428.0" prefHeight="40.0" prefWidth="75.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="429.0" layoutX="229.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" width="361.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.29924243688583374">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.35789474844932556" blue="0.011929824948310852" opacity="0.5899999737739563" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9946164199192462">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <VBox layoutX="239.0" layoutY="43.0" prefHeight="408.0" prefWidth="334.0" spacing="5.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="dateTF" onAction="#cettedate" promptText="EX:01/01/2024" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="adresseTF" promptText="EX:Tunis-Tunis" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Client">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="clientTF" promptText="EX:User" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="statusTF" prefWidth="150.0" />
+
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantitie">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="quantiteTF" promptText="EX:{0...+∞}" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Frais">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fraisTF" prefHeight="26.0" prefWidth="187.0" promptText="Ex: 9999.99999" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Livreur">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="livreurTF" />
+         </children>
+      </VBox>
+      <Button layoutX="576.0" layoutY="1.0" mnemonicParsing="false" onAction="#FermePage" text="✗" textFill="#d10000" />
+   </children>
+</AnchorPane>
